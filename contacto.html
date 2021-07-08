@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="contacto.css">
+    <script src="https://kit.fontawesome.com/b29d4baab6.js" crossorigin="anonymous"></script>
+    <title>Test Drive</title>
+</head>
+
+<body>
+    <div class="contactobody">
+         <header>
+            <div>
+              <a href="index (1).html"> 
+                  <h1 class="titulo"><img width="40px" src="images (1)/helmet.png"> Rosario Motos <img class="logo2" width="40px" src="images (1)/helmet.png"> </h1>
+              </a> 
+            </div>
+        
+        <div class="barra">
+          
+            <nav>
+                <ul>            
+                    <li><a href="contacto.html">Contactenos</a></li>             
+                    <li><a href="curriculum.html">Trabaje para nosotros</a></li>         
+                </ul>
+            </nav>
+        </div>
+    </header>
+        <div class="contacto">
+            
+            <article class="contenedor-form">
+
+                <i class="fas fa-headset"></i>
+
+                <h1>Formulario de contacto</h1>
+                
+                <form action="/contacto" method="POST">
+
+                    <input type="text" placeholder="Apellido" id="apellido" required="">
+
+                    <input type="text" placeholder="Nombre" id="nombre" required="">
+
+                    <input type="tel" placeholder="Teléfono" id="telefono" required="">
+
+                    <input type="email" placeholder="Email" id="email" required="">
+
+                    <label class="horariotext" for="horario">Horario de contacto</label>
+                    <input class="horario" type="time" id="horario" required="">
+
+                    <textarea name="consulta" id="consulta" cols="30" rows="10" placeholder="Ingrese aquí su consulta"></textarea>
+                
+                    <div class="button-container">
+                        <button type="reset"  id="reset" required>Eliminar datos</button>
+                        <button type="submit"  id="submit" required>Enviar</button>
+                    </div>
+
+                </form>
+
+            </article>
+        </div>
+        <footer>
+         <div class="barra">
+            <nav>
+                <ul>            
+                    <li><a href="contacto.html">Contactenos</a></li>             
+                    <li><a href="curriculum.html">Trabaje para nosotros</a></li>         
+                </ul>
+            </nav>
+        </footer>
+    </div>
+</body>
+
+</html>

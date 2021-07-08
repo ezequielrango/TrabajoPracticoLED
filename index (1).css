@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+
+
+:root{ 
+    --color-fondo: rgb(234, 242, 239);/*menta crema - mint cream*/
+    --color-letra-titulo: rgb(255,255,255);
+    --color-cabezera: rgba(34, 60, 139, 0.952);
+    --color-botones2: rgba(45, 30, 82, 0.589);
+    --color-footer: rgba(172, 20, 25, 0.856);
+    --color-hovermarcas: rgba(3, 3, 3, 0.781);
+    --color-barradenav: rgba(0, 0, 0, 0.808);
+}
+* {
+    Margin: 0%;
+    font-family: "Roboto";
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: var(--color-cabezera);
+    color: var(--color-letra-titulo);
+}
+
+.logo2{
+    transform: scaleX(-1);
+}
+
+body {
+    text-align: left;
+    margin: 0px;
+}
+
+.indexbody{
+    background-image: url("https://image.freepik.com/foto-gratis/primer-plano-articulos-lujo-motocicleta-faros-amortiguador-rueda-ala-tonificacion_155003-4180.jpg");
+    background-size: cover;
+}
+
+
+
+.barra{
+    margin: 0px;
+    border: 5px solid var(--color-barradenav);
+    background-color: var(--color-barradenav);
+    color: blanchedalmond;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+li {
+    padding: 10px;
+}
+
+li:hover{
+    background-color: var(--color-botones2);
+}
+
+a {
+    text-decoration: none;
+    color:inherit;
+}
+
+
+
+.caja-marcas {
+    display: flex;
+    justify-content: center;
+}
+
+.caja-marcas a {
+    margin: 15px;
+}
+
+.logos {
+    height: 300px;
+}
+
+.titulo {
+    margin: 0px;
+    text-align: center;
+    padding: 30px;
+    font-size: 50px;
+}
+
+.cajasuperiorbody {
+    color:blanchedalmond;
+    text-align: center;
+    padding: 25px;
+    font-size: 18px;
+}
+
+.marcas {
+    padding-top: 10px;
+    color: blanchedalmond;
+    float: left;
+    text-align: center;
+    
+}
+
+.marcas:hover {
+    border-radius: 50px;
+    background-color: var(--color-hovermarcas);
+}
+
+
+footer {
+    clear:both;
+    text-align: center;
+    padding: 20px;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.87);
+
+}
+
+.hola {
+    text-align: center;
+    padding-top: 20px;
+    background-color: rgba(0, 0, 0, 0.87);
+    height: 100%;
+    padding-bottom: 20px;
+}
+
+.contacto{
+    width: 100%;
+    
+}
+.contactobody {
+    background-image: url('https://www.xtrafondos.com/wallpapers/moto-yamaha-mt-09-3142.jpg');
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center;
+}
+
+.contacto h1 {
+    text-align: center;
+    font-size: 3em;
+    padding: 5% 0% 0% 0%;
+    color: white;
+}
+.contacto .contenedor-form{
+    position: relative;
+    margin: 10% auto;
+    width: 50%;
+    height: 80vw;
+    background-color: rgba(0, 0, 0, 0.38);
+    border-radius: 50px;
+}
+.contacto .contenedor-form i {
+    position: absolute;
+    top: -7.8%;
+    width: 100px;
+    height: 100px;
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 6em;
+    right: 43%;
+}
+.contacto .contenedor-form input {
+    display: block;
+    width: 65%;
+    height: 2.6vw;
+    margin: 5% auto;
+    border-radius: 50px;
+    font-size: 1.5em;
+    background-color: rgba(150, 141, 141, 0.411);
+    border: none;
+    color: white;
+    text-indent: 10px;
+}
+.contacto .contenedor-form .horariotext {
+    display: inline-block;
+    width: 35%;
+    font-size: 1.5em;
+    margin-left: 17.5%;
+    text-align: left;
+    color: white;
+    font-weight: bold;
+}
+.contacto .contenedor-form .horario {
+    display: inline-block;
+    width: 30%;
+    height: 2.6vw;
+    margin: 5% auto;
+    border-radius: 50px;
+    text-align: center;
+}
+.contacto .contenedor-form textarea {
+    width: 65%;
+    margin: 5% auto;
+    display: block;
+    border-radius: 16px;
+    font-size: 1.5em;
+    background-color: rgba(150, 141, 141, 0.411);
+    border: none;
+    height: 10vw;
+    color: white;
+    text-indent: 10px;
+}
+.contacto .contenedor-form .button-container {
+    width: 100%;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+}
+.contacto .contenedor-form #reset{
+        width: 20%;
+        margin: 0% 10%;
+        font-size: 1.4em;
+        border: none;
+        border-radius: 20px;
+        text-align: center;
+        height: 3vw;
+        color: white;
+        background-color: rgba(255, 0, 0, 0.795);
+}
+.contacto .contenedor-form #submit{
+    width: 20%;
+    margin: 0% 10%;
+    font-size: 1.4em;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+    height: 3vw;
+    color: white;
+    background-color: rgba(91, 182, 31, 0.795);
+}
+
+
+.curriculumbody {
+    background-image: url('http://www.solofondos.com/wp-content/uploads/2016/01/154-1549746_fondos-de-pantalla-de-motos-para-celular.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.formu{
+    position: relative;
+    margin: 10% auto;
+    width: 50%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-bottom: 20px;
+    height: 90%;
+    background-color:rgba(70, 67, 67, 0.541);
+    border-radius: 50px;
+    color:white;
+}
+
+.art {
+    
+    position: relative;
+    margin: auto;
+    width: 50%;
+    height: 70vw;
+}
+
+.sexo {
+    font-size: 20px;
+    margin-top: 6%;
+    margin-bottom: 3%;
+}
+
+form {
+    margin-bottom: 6%;
+}
+
+form input {
+    width: 65%;
+    height: 2.6vw;
+    margin: 2% auto;
+    border-radius: 50px;
+    font-size: 1.3em;
+}
+
+#edad {
+    width: 65%;
+    size: 2;
+}
+
+
+.puesto {
+    margin-bottom: 3%;
+    display: grid;
+    justify-content: center;
+    text-align: left;
+}
+
+
+.puesto input{
+    
+    margin-bottom: 1.5%;
+    color: snow;
+
+}
+
+.adjun{
+    display: grid;
+    justify-content: center;
+    padding-bottom: 5px;
+}
+
+.adjun h2{
+    grid-row: 1;
+    grid-column: 1/3;
+    margin:10px;
+}
+
+.subir {
+    grid-row: 2;
+    grid-column: 1;
+    width: 100px;
+}
+
+
+.enviar {
+    grid-row: 2;
+    grid-column: 2;
+    width: 100px;
+}
+
+.puesto h1{
+    padding: 5px;
+}
+
+.text {
+    display: grid;
+    justify-content: center;
+    margin: 0px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.textocuadro{
+    resize: none;
+    justify-content: center;
+    width: 300px;
+    height: 160px;
+}

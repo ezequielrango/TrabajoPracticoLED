@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="curric.css">
+    <title>Trabajá con nosotros</title>
+</head>
+
+<body>
+    <div class="curriculumbody">
+        <header>
+            <div>
+              <a href="index (1).html"> 
+                  <h1 class="titulo"><img width="40px" src="images (1)/helmet.png"> Rosario Motos <img class="logo2" width="40px" src="images (1)/helmet.png"> </h1>
+              </a> 
+            </div>
+        
+        <div class="barra">
+          
+            <nav>
+                <ul>            
+                    <li><a href="contacto.html">Contactenos</a></li>             
+                    <li><a href="curriculum.html">Trabaje para nosotros</a></li>         
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="curriculum">
+
+         <h1>Cargá tu currículum y trabajá con nosotros</h1>
+
+
+         <form name="formulario" method="POST" enctype="multipart/form-data" class="contenedor-form">
+
+       
+            <h3>Informacion Personal:</h3>
+
+             <label class="labelsuperior">Genero</label>
+
+             <input type="radio" name="sexo" value="hombre" checked="checked" id="hombre"> 
+             <label class="labelgenero" for="hombre">Hombre</label>
+
+             <input type="radio" name="sexo" value="mujer" id="mujer">
+             <label class="labelgenero" for="mujer">Mujer</label>
+
+       
+            <input type="text" placeholder=" Apellido" id="apellido" class="input-comun" class="input-comun">
+            <input type="text" placeholder=" Nombre" id="nombre" class="input-comun">
+            <input type="text" placeholder=" Edad" id="edad" maxlength="2" class="input-comun">
+            <input type="tel" placeholder=" Teléfono" id="mitelefono" class="input-comun">
+            <input type="email" name="micorreo" id="micorreo" placeholder= " Correo Electrónico" required autofocus class="input-comun">
+            <input type="text" placeholder=" Dirección" id="dire" class="input-comun">
+            <input type="text" placeholder=" Ciudad de residencia" id="ciudad" class="input-comun">
+
+            <h2>Formación académica:</h2>
+
+            <input type="text" placeholder=" Titulo Secundario" id="titsec" class="input-comun">
+            <input type="text" placeholder=" Título Terciario/Universitario" id="tituni" class="input-comun">
+       
+
+            <h2>Puesto al que aspira:</h2>
+
+            <div class="seleccion">  
+                 <input name="puesto_directivo" type="checkbox" value="vendedor" id="vendedor">
+                 <label for="vendedor">Vendedor</label>
+            </div>
+
+            <div class="seleccion">
+                 <input name="puesto_tecnico" type="checkbox" value="mecanico" id="mecanico" >
+                 <label for="mecanico">Mecánico</label>
+            </div>
+
+            <div class="seleccion">
+                 <input id="admin" name="puesto_empleado" type="checkbox" value="admin">
+                 <label for="admin">Administrador</label>
+            </div>
+            <div class="seleccion">
+                 <input name="puesto_empleado" type="checkbox" value="ejecutivo" id="ejecutivo">
+                 <label for="ejecutvo">Ejecutivo</label>
+            </div>
+
+            <h2>Texto complementario:</h2>
+            <textarea class="textocuadro" namd="carta" cols="30" rows="10" ></textarea>
+
+
+            <h2>Cargá tu curriculum en formato pdf o jpg</h2>
+
+            <input class="cv-up" type="file" name="adjunto" />
+
+            <button  class="enviar" type="submit">Enviar</button> 
+
+        </form>
+
+        </div>
+
+        <footer>
+         <div class="barra">
+            <nav>
+                <ul>            
+                    <li><a href="contacto.html">Contactenos</a></li>             
+                    <li><a href="curriculum.html">Trabaje para nosotros</a></li>         
+                </ul>
+            </nav>
+        </footer>
+    </div>
+</body>
+
+</html>
