@@ -75,7 +75,7 @@ a {
 .curriculum .contenedor-form{
     text-align: center;
     position: relative;
-    margin: 0% auto;
+    margin: 7% auto;
     width: 50%;
     height: 104vw;
     background-color: rgba(0, 0, 0, 0.38);
@@ -98,12 +98,14 @@ text-indent: 10px;
 
 
 .curriculum{
+    text-align: center;
     padding-bottom: 5%;
     width: 100%;
-    background-image: url('https://www.xtrafondos.com/wallpapers/moto-yamaha-mt-09-3142.jpg');
-    background-size: cover;
-    background-attachment: scroll;
+    background-image: url('https://images.ctfassets.net/x7j9qwvpvr5s/1wE9t7K5lmYY4OCEmSyAem/860e44ee26de35c93c684ff3aa0a258f/Diavel-1260-S-MY19-06-Gallery-1920x1080.jpg');
+    background-size: contain;
+    background-attachment: fixed;
     background-position: center;
+    background-size: 100%;
 }
 .curriculum h1 {
     text-align: center;

@@ -75,10 +75,11 @@ a {
     padding-top: 10%;
     padding-bottom: 5%;
     width: 100%;
-    background-image: url('https://www.xtrafondos.com/wallpapers/moto-yamaha-mt-09-3142.jpg');
-    background-size: cover;
-    background-attachment: scroll;
+    background-image: url('https://images.ctfassets.net/x7j9qwvpvr5s/2ARiTlPlNm2sukEuMGkaOA/3a238cee1bfdfa60aff9c16a9620efb4/Panigale-V4-MY18-Red-17-Slider-Gallery-1920x1080.jpg');
+    background-size: 100%;
+    background-attachment: fixed;
     background-position: center;
+    background-repeat: no-repeat;
 }
 .contacto h1 {
     text-align: center;
@@ -90,7 +91,7 @@ a {
     position: relative;
     margin: 0% auto;
     width: 50%;
-    height: 80vw;
+    height: 63vw;
     background-color: rgba(0, 0, 0, 0.38);
     border-radius: 50px;
 }
@@ -110,7 +111,7 @@ a {
     margin: 5% auto;
     border-radius: 50px;
     font-size: 1.5em;
-    background-color: rgba(150, 141, 141, 0.411);
+    background-color: rgba(150, 141, 141, 0.199);
     border: none;
     color: white;
 text-indent: 10px;
