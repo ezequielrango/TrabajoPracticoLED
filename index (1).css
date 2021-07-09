@@ -5,7 +5,7 @@
 :root{ 
     --color-fondo: rgb(234, 242, 239);/*menta crema - mint cream*/
     --color-letra-titulo: rgb(255,255,255);
-    --color-cabezera: rgba(34, 60, 139, 0.952);
+    --color-cabezera: rgb(34, 60, 139);
     --color-botones2: rgba(45, 30, 82, 0.589);
     --color-footer: rgba(172, 20, 25, 0.856);
     --color-hovermarcas: rgba(3, 3, 3, 0.781);
@@ -345,4 +345,13 @@ form input {
     justify-content: center;
     width: 300px;
     height: 160px;
+}
+
+.grupo6{
+    margin: auto;
+    text-align: center;
+}
+
+footer li{
+    margin: 0% auto;
 }

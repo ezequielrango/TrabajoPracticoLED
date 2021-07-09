@@ -158,3 +158,11 @@ label{
     color: white;
     background-color: rgba(91, 182, 31, 0.795);
 }
+.grupo6{
+    margin: auto;
+    text-align: center;
+}
+
+footer li{
+    margin: 0% auto;
+}
