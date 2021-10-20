@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="curric.css">
     <title>Trabajá con nosotros</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 
 <body>
@@ -13,7 +14,7 @@
         <header>
             <div>
               <a href="index (1).html"> 
-                  <h1 class="titulo"><img width="40px" src="images (1)/helmet.png"> Rosario Motos <img class="logo2" width="40px" src="images (1)/helmet.png"> </h1>
+                  <h1 class="titulo"><img width="40px" src="images/helmet.png"> Rosario Motos <img class="logo2" width="40px" src="images/helmet.png"> </h1>
               </a> 
             </div>
         
@@ -32,7 +33,7 @@
          <h1>Cargá tu currículum y trabajá con nosotros</h1>
 
 
-         <form name="formulario" method="POST" enctype="multipart/form-data" class="contenedor-form">
+         <form id="formCV" name="formulario" method="POST" enctype="multipart/form-data" class="contenedor-form">
 
        
             <h3>Informacion Personal:</h3>
@@ -46,18 +47,40 @@
              <label class="labelgenero" for="mujer">Mujer</label>
 
        
-            <input type="text" placeholder=" Apellido" id="apellido" class="input-comun" class="input-comun">
+            <input type="text" placeholder=" Apellido" id="apellido" class="input-comun" >
+            <p id="errorApellido" class="error"></p>
+           
             <input type="text" placeholder=" Nombre" id="nombre" class="input-comun">
-            <input type="text" placeholder=" Edad" id="edad" maxlength="2" class="input-comun">
+            <p id="errorName" class="error"></p>
+           
+            <!-- <input type="text" placeholder=" Edad" id="edad" maxlength="2" class="input-comun"> -->
+            <label for="start">Fecha de nacimiento:</label>
+
+            <input type="date" id="edad" name="trip-start"
+                value=""
+                min="1945-01-01" max="2021-12-31">
+
+            <p id="errorAge" class="error"></p>
+          
             <input type="tel" placeholder=" Teléfono" id="mitelefono" class="input-comun">
-            <input type="email" name="micorreo" id="micorreo" placeholder= " Correo Electrónico" required autofocus class="input-comun">
+            <p id="errorCel" class="error"></p>
+           
+            <input type="email" name="micorreo" id="micorreo" placeholder= " Correo Electrónico"  class="input-comun">
+            <p id="errorEmail" class="error"></p>
+          
             <input type="text" placeholder=" Dirección" id="dire" class="input-comun">
+            <p id="errorAddress" class="error"></p>
+           
             <input type="text" placeholder=" Ciudad de residencia" id="ciudad" class="input-comun">
+            <p id="errorCity" class="error"></p>
 
             <h2>Formación académica:</h2>
 
             <input type="text" placeholder=" Titulo Secundario" id="titsec" class="input-comun">
+            <p id="errorSchool" class="error"></p>
+
             <input type="text" placeholder=" Título Terciario/Universitario" id="tituni" class="input-comun">
+            <p id="errorUniversity" class="error"></p>
        
 
             <h2>Puesto al que aspira:</h2>
@@ -82,12 +105,12 @@
             </div>
 
             <h2>Texto complementario:</h2>
-            <textarea class="textocuadro" namd="carta" cols="30" rows="10" ></textarea>
+            <textarea class="textocuadro" name="carta" cols="30" rows="10" ></textarea>
 
 
             <h2>Cargá tu curriculum en formato pdf o jpg</h2>
 
-            <input class="cv-up" type="file" name="adjunto" />
+            <input id="presentacion" class="cv-up" type="file" name="adjunto" />
 
             <button  class="enviar" type="submit">Enviar</button> 
 
@@ -108,6 +131,7 @@
                </nav>
            </footer>
     </div>
+    <script src="/cvValidator.js"></script>
 </body>
 
 </html>

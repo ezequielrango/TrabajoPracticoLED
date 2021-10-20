@@ -36,8 +36,18 @@ header {
     justify-content: center;
 }
 
-
-
+.error{
+    color: red; 
+    font-size: 1.7vw;
+    margin: 0;
+    line-height: normal;
+}
+ .is-invalid{
+    background-image: url(./images/is-invalid.svg) ;
+    background-repeat: no-repeat;
+    background-position: right calc(.375em + .1875rem) center;
+    background-size: calc(.75em + 0.775rem) calc(3.45em + 1.575rem);
+ }
 ul {
     list-style: none;
     display: flex;
@@ -134,6 +144,7 @@ textarea {
     color: white;
     text-indent: 10px;
 }
+
 label{
     color: white;
     font-size: 1em;
