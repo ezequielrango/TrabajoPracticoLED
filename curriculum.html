@@ -38,13 +38,7 @@
        
             <h3>Informacion Personal:</h3>
 
-             <label class="labelsuperior">Genero</label>
 
-             <input type="radio" name="sexo" value="hombre" checked="checked" id="hombre"> 
-             <label class="labelgenero" for="hombre">Hombre</label>
-
-             <input type="radio" name="sexo" value="mujer" id="mujer">
-             <label class="labelgenero" for="mujer">Mujer</label>
 
        
             <input type="text" placeholder=" Apellido" id="apellido" class="input-comun" >
@@ -56,9 +50,7 @@
             <!-- <input type="text" placeholder=" Edad" id="edad" maxlength="2" class="input-comun"> -->
             <label for="start">Fecha de nacimiento:</label>
 
-            <input type="date" id="edad" name="trip-start"
-                value=""
-                min="1945-01-01" max="2021-12-31">
+            <input type="date" id="edad"   min="1945-01-01" max="2021-12-31">
 
             <p id="errorAge" class="error"></p>
           
@@ -83,27 +75,7 @@
             <p id="errorUniversity" class="error"></p>
        
 
-            <h2>Puesto al que aspira:</h2>
-
-            <div class="seleccion">  
-                 <input name="puesto_directivo" type="checkbox" value="vendedor" id="vendedor">
-                 <label for="vendedor">Vendedor</label>
-            </div>
-
-            <div class="seleccion">
-                 <input name="puesto_tecnico" type="checkbox" value="mecanico" id="mecanico" >
-                 <label for="mecanico">Mecánico</label>
-            </div>
-
-            <div class="seleccion">
-                 <input id="admin" name="puesto_empleado" type="checkbox" value="admin">
-                 <label for="admin">Administrador</label>
-            </div>
-            <div class="seleccion">
-                 <input name="puesto_empleado" type="checkbox" value="ejecutivo" id="ejecutivo">
-                 <label for="ejecutvo">Ejecutivo</label>
-            </div>
-
+  
             <h2>Texto complementario:</h2>
             <textarea class="textocuadro" name="carta" cols="30" rows="10" ></textarea>
 

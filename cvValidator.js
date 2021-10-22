@@ -20,7 +20,7 @@ window.addEventListener("load",()=>{
     const inputName= $('nombre');
     const inputApellido = $('apellido');
     const phone=$('mitelefono');
-    const age=$('edad');
+    const fechaNacimiento=$('edad');
     const email=$('micorreo');
     const address=$('dire');
     const city=$('ciudad');
@@ -38,6 +38,32 @@ window.addEventListener("load",()=>{
 
     //Texto complementario:
     const cart=$('presentacion');
+
+
+
+    //FUNCIONES 
+
+    const calcularEdad = (fechaNacimiento) => {
+        const fechaActual = new Date();
+        const anoActual = parseInt(fechaActual.getFullYear());
+        const mesActual = parseInt(fechaActual.getMonth()) + 1;
+        const diaActual = parseInt(fechaActual.getDate());
+    
+        
+        const anoNacimiento = parseInt(String(fechaNacimiento).substring(0, 4));
+        const mesNacimiento = parseInt(String(fechaNacimiento).substring(5, 7));
+        const diaNacimiento = parseInt(String(fechaNacimiento).substring(8, 10));
+    
+        let edad = anoActual - anoNacimiento;
+        if (mesActual < mesNacimiento) {
+            edad--;
+        } else if (mesActual === mesNacimiento) {
+            if (diaActual < diaNacimiento) {
+                edad--;
+            }
+        }
+
+    };
 
 
 
@@ -65,6 +91,7 @@ window.addEventListener("load",()=>{
     //Nombre
 
    inputName.addEventListener('keyup',() =>{
+       console.log(inputName.value);
        if(inputName.value.trim()==''){
         inputName.classList.add("is-invalid")
         $('errorName').innerHTML = "Nombre obligatorio"
@@ -83,17 +110,20 @@ window.addEventListener("load",()=>{
 
    // Edad
 
-   age.addEventListener('keyup',()=> {
-    if(age.value.trim()==''){
-        age.classList.add('is-invalid')
-        $('errorAge').innerHTML = 'Ingresar edad'
-    }else if(!Number.isInteger(parseInt(age.value))){
-        age.classList.add('is-invalid')
-        $('errorAge').innerHTML = 'Ingresar solo nùmeros'
-    }else{
-        age.classList.remove('is-invalid')
-        $('errorAge').innerHTML  =null 
+   fechaNacimiento.addEventListener('change',()=> {
+
+    if (fechaNacimiento.value) {
+        $('errorAge').innerHTML = `Lo siento, eres menor de edad. Tienes : ${calcularEdad(fechaNacimiento.value)} años`;
     }
+    // else{
+    //     inputName.classList.remove('is-invalid')
+    //     $('errorName').innerHTML = null 
+    //     errors = false;
+    // }
+    
+    
+    console.log(fechaNacimiento.value);
+
 })
 
 
