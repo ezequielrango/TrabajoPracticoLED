@@ -53,7 +53,7 @@ window.addEventListener("load",()=>{
         const anoNacimiento = parseInt(String(fechaNacimiento).substring(0, 4));
         const mesNacimiento = parseInt(String(fechaNacimiento).substring(5, 7));
         const diaNacimiento = parseInt(String(fechaNacimiento).substring(8, 10));
-    
+        
         let edad = anoActual - anoNacimiento;
         if (mesActual < mesNacimiento) {
             edad--;
@@ -63,6 +63,7 @@ window.addEventListener("load",()=>{
             }
         }
 
+            return edad
     };
 
 
@@ -110,20 +111,19 @@ window.addEventListener("load",()=>{
 
    // Edad
 
+   // INGRESAR EDAD COMPLETA 
+   
    fechaNacimiento.addEventListener('change',()=> {
 
-    if (fechaNacimiento.value) {
-        $('errorAge').innerHTML = `Lo siento, eres menor de edad. Tienes : ${calcularEdad(fechaNacimiento.value)} años`;
-    }
-    // else{
-    //     inputName.classList.remove('is-invalid')
-    //     $('errorName').innerHTML = null 
-    //     errors = false;
-    // }
-    
-    
-    console.log(fechaNacimiento.value);
+    const edad = calcularEdad(fechaNacimiento.value)
 
+    if (edad < 18 ) {
+        $('errorAge').innerHTML = `Lo siento, eres menor de edad. Tienes : ${edad} años`;
+    }
+     else{
+        $('errorAge').innerHTML = null 
+      errors = false;
+     }
 })
 
 
