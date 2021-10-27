@@ -1,15 +1,16 @@
-const $ = id => document.getElementById(id) ;
+const $ = id => document.getElementById(id) ; // Constante para capturar elementos por su id
 let errors = false;
-let regExEmail =  /^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]:+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$/;
+let regExEmail =  /^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]:+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$/; // Validar email
 
 
 
 
 
 
-window.addEventListener("load",()=>{
+window.addEventListener("load",()=>{ // poner en escucha y cargar la ventana
 
-    //FORMULARIO
+
+/*===========================FORMULARIO===========================*/
 
     const form = $('formCV')
 
@@ -37,24 +38,32 @@ window.addEventListener("load",()=>{
     
 
     //Texto complementario:
-    const cart=$('presentacion');
-
+    const presentation=$('presentacion');
+    // contador 
+    const contador=$('contador');
 
 
     //FUNCIONES 
 
     const calcularEdad = (fechaNacimiento) => {
         const fechaActual = new Date();
+
         const anoActual = parseInt(fechaActual.getFullYear());
+
         const mesActual = parseInt(fechaActual.getMonth()) + 1;
         const diaActual = parseInt(fechaActual.getDate());
     
+    
         
-        const anoNacimiento = parseInt(String(fechaNacimiento).substring(0, 4));
+        const anoNacimiento = parseInt(String(fechaNacimiento).substring(0, 4)); // recorta el string, tomando las posiciones y lo convierte a entero 
+
         const mesNacimiento = parseInt(String(fechaNacimiento).substring(5, 7));
         const diaNacimiento = parseInt(String(fechaNacimiento).substring(8, 10));
         
-        let edad = anoActual - anoNacimiento;
+
+        let edad = anoActual - anoNacimiento; // ejemplo : 2021 - 2000 = 21 años
+
+
         if (mesActual < mesNacimiento) {
             edad--;
         } else if (mesActual === mesNacimiento) {
@@ -63,7 +72,7 @@ window.addEventListener("load",()=>{
             }
         }
 
-            return edad
+            return edad // únicamente devuelve el valor
     };
 
 
@@ -73,16 +82,17 @@ window.addEventListener("load",()=>{
    
    //Apellido
 
-   inputApellido.addEventListener('keyup',() =>{
-    if(inputApellido.value.trim()==''){
-     inputApellido.classList.add("is-invalid")
-     $('errorApellido').innerHTML = "apellido obligatorio"
+   inputApellido.addEventListener('keyup',() =>{  // Se pone un evento en escucha sobre el input del apellido
+
+    if(inputApellido.value.trim()==''){   // con el value accedemos al valor del input. Le aplicamos trim() para evitar que lo rellenen con espacios
+     inputApellido.classList.add("is-invalid") // Agrega una clase que cara el icono de advertencia
+     $('errorApellido').innerHTML = "apellido obligatorio" // A la etiqueta <p></p> que estabo del input la modifico con ese texto
      errors= true;
- }else if(inputApellido.value.trim().length < 2){
+ }else if(inputApellido.value.trim().length < 2){ // Sino si la longitud del valor ingresado en el input es menor a 2 caracteres ejecuta el siguiente codigo
      inputApellido.classList.add("is-invalid")
      $("errorApellido").innerHTML = "El apellido debe tener al menos 2 caracteres"
      errors = true; 
- }else{
+ }else{  //Sino, quita la clase que contiene el circulo rojo y no modifica la <p></p> que esta debajo del input
      inputApellido.classList.remove('is-invalid')
      $('errorApellido').innerHTML = null 
      errors = false;
@@ -110,15 +120,15 @@ window.addEventListener("load",()=>{
 
 
    // Edad
-
+ 
    // INGRESAR EDAD COMPLETA 
    
-   fechaNacimiento.addEventListener('change',()=> {
+   fechaNacimiento.addEventListener('change',()=> { // evento "change" se activa cuando cambia un valor
 
-    const edad = calcularEdad(fechaNacimiento.value)
+    const edad = calcularEdad(fechaNacimiento.value) // Funcion que recibe el valor ingresado en el calendario 
 
     if (edad < 18 ) {
-        $('errorAge').innerHTML = `Lo siento, eres menor de edad. Tienes : ${edad} años`;
+        $('errorAge').innerHTML = `Lo siento, eres menor de edad. Tienes : ${edad} años`; 
     }
      else{
         $('errorAge').innerHTML = null 
@@ -226,9 +236,15 @@ window.addEventListener("load",()=>{
     })
 
 
+    //Presentación 
 
 
-
+     presentation.addEventListener('input',function(e){
+         const target = e.target;
+         const longitudMax = target.getAttribute('maxlength');
+         const longitudAct = target.value.length;
+         contador.innerHTML = 'hola';
+     })
 
 })
 
@@ -236,7 +252,7 @@ window.addEventListener("load",()=>{
     
     
     
-    form.addEventListener("submit",(e) =>{
+    form.addEventListener("submit",(e) =>{ // Previene que se envíe el formulario
         e.preventDefault()
     })
 })

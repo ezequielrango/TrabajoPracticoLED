@@ -42,7 +42,9 @@ header {
     margin: 0;
     line-height: normal;
 }
- .is-invalid{
+
+/* Carga circulo rojo  */
+ .is-invalid{ 
     background-image: url(./images/is-invalid.svg) ;
     background-repeat: no-repeat;
     background-position: right calc(.375em + .1875rem) center;
