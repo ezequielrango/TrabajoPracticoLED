@@ -77,9 +77,12 @@
 
   
             <h2>Texto complementario:</h2>
-            <textarea  id="presentacion" class="textocuadro" name="carta" cols="30" rows="10" maxlength="500" ></textarea>
-            <p id="contador"></p>
+            <div class="presentationContainer">
+                <textarea  id="presentacion" class="textocuadro" name="carta" cols="30" rows="10" maxlength='500'  ></textarea>
+                <p id="contador" class="contador"></p>
+                <p id="errorPresentation" class="error"></p>
 
+            </div>
             <h2>Cargá tu curriculum en formato pdf o jpg</h2>
 
             <input class="cv-up" type="file" name="adjunto" />

@@ -39,8 +39,8 @@ window.addEventListener("load",()=>{ // poner en escucha y cargar la ventana
 
     //Texto complementario:
     const presentation=$('presentacion');
-    // contador 
-    const contador=$('contador');
+  
+  
 
 
     //FUNCIONES 
@@ -81,6 +81,7 @@ window.addEventListener("load",()=>{ // poner en escucha y cargar la ventana
    
    
    //Apellido
+   
 
    inputApellido.addEventListener('keyup',() =>{  // Se pone un evento en escucha sobre el input del apellido
 
@@ -159,7 +160,7 @@ window.addEventListener("load",()=>{ // poner en escucha y cargar la ventana
 
     email.addEventListener("keyup",() =>{
 
-        if (!regExEmail.test(email.value)) {
+        if (!regExEmail.test(email.value)) {  // Verifica que sea un email válido
             email.classList.add("is-invalid")
             $("errorEmail").innerHTML = "Debes ingresar un email válido"
             errors = true;
@@ -237,22 +238,27 @@ window.addEventListener("load",()=>{ // poner en escucha y cargar la ventana
 
 
     //Presentación 
-
-
-     presentation.addEventListener('input',function(e){
-         const target = e.target;
-         const longitudMax = target.getAttribute('maxlength');
-         const longitudAct = target.value.length;
-         contador.innerHTML = 'hola';
-     })
+    presentation.addEventListener("input", event => {
+        const target = event.currentTarget;
+        const maxLength = target.getAttribute("maxlength"); // Toma el valor del atributo del html, maximo del string permitido.
+        const currentLength = target.value.length;   // Longitud actual del string, capturada con el evento
+        $('contador').innerHTML = `Actual: ${currentLength}/Restante ${maxLength - currentLength}`
+        if (currentLength >= maxLength) { // Si el string ingresado es mayor o igual al maximo muestra la advertencia
+         $('errorPresentation').innerHTML="llegaste al máximo de caracteres";
+         
+        }else {
+            $('errorPresentation').innerHTML= null
+        }
+    
+    });
 
 })
 
 
     
+    // Previene que se envíe el formulario
     
-    
-    form.addEventListener("submit",(e) =>{ // Previene que se envíe el formulario
+    form.addEventListener("submit",(e) =>{ 
         e.preventDefault()
     })
 })

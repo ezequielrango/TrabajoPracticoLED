@@ -35,7 +35,11 @@ header {
     display: flex;
     justify-content: center;
 }
-
+.contador{
+    color :rgba(91, 182, 31, 0.795);
+    font-size: 2em;
+    font-weight: bold;
+}
 .error{
     color: red; 
     font-size: 1.7vw;
@@ -129,13 +133,23 @@ text-indent: 10px;
 h2{
     color: white;
 }
+h2:hover{
+    color: rgb(184, 210, 231);
+}
 h3{
     color: white;
     font-size: 1.3em;
-    margin: 3% auto;
+    margin: 5% auto;
+}
+h3:hover{
+    color: rgb(184, 210, 231);
+}
+.presentationContainer{
+    margin: auto;
+    width: 80%;
 }
 textarea {
-    width: 65%;
+    width: 100%;
     margin: 5% auto;
     display: block;
     border-radius: 16px;
@@ -145,6 +159,7 @@ textarea {
     height: 10vw;
     color: white;
     text-indent: 10px;
+    overflow: hidden;
 }
 
 label{
@@ -170,6 +185,10 @@ label{
     height: 3vw;
     color: white;
     background-color: rgba(91, 182, 31, 0.795);
+}
+.enviar:hover {
+    background-color: rgba(102, 255, 0, 0.795);
+
 }
 .grupo6{
     margin: auto;
